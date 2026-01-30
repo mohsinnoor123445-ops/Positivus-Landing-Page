@@ -819,162 +819,106 @@ hr {
     color: #fff;
     text-decoration: underline;
 }
+/* Tablet & Smaller Laptops */
 @media (max-width: 1024px) {
-
-  .navbar {
-    padding: 14px 24px;
-  }
-
-  .logo-text {
-    font-size: 26px;
-  }
-
-  .nav-links {
-    gap: 24px;
-  }
-
-  .btn-quote {
-    padding: 14px 22px;
-    font-size: 16px;
-  }
-
-  .hero {
-    min-height: 70vh;
-  }
-
-  .service-card {
-    padding: 24px;
-    height: 230px;
-  }
-
-  .service-img {
-    width: 100px;
-  }
-
-  .cta-wrapper {
-    padding: 40px;
-    margin: 30px;
-  }
-
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .wrapper {
-    width: 100%;
-    height: auto;
-  }
+    .navbar { padding: 15px 20px; }
+    .nav-links { gap: 20px; }
+    .hero { min-height: 70vh; }
+    
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+    
+    .wrapper { width: 95%; height: auto; padding: 30px; }
+    
+    .footer { padding: 40px; }
 }
+
+/* Mobile Devices (Max 768px) */
 @media (max-width: 768px) {
+    body { font-size: 14px; }
 
-  body {
-    font-size: 14px;
-  }
+    /* Navbar Stack */
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
 
-  /* Navbar */
-  .navbar {
-    padding: 12px 16px;
-  }
+    .btn-quote { width: 100%; text-align: center; }
 
-  .logo-text {
-    font-size: 22px;
-  }
+    /* Hero */
+    .hero { text-align: center; min-height: auto; padding: 40px 0; }
+    .hero-img { margin-top: 30px; }
 
-  .nav-links {
-    gap: 18px;
-  }
+    /* Services: Stack Cards */
+    .service-card {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 20px;
+    }
+    .service-img { align-self: center; margin-bottom: 10px; }
 
-  .nav-links li a {
-    font-size: 15px;
-  }
+    /* CTA: Stack */
+    .cta-wrapper {
+        flex-direction: column;
+        padding: 30px;
+        margin: 20px;
+        text-align: center;
+    }
+    .cta-content { max-width: 100%; }
+    .cta-graphics { display: none; /* Hide graphics on mobile or adjust width */ }
 
-  .btn-quote {
-    padding: 12px 18px;
-    font-size: 14px;
-  }
+    /* Case Study: Stack and Fix Lines */
+    .case-container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+    
+    .case-line {
+        width: 100%;
+        height: 1px; /* Turn vertical line into horizontal divider */
+        margin: 10px 0;
+    }
 
-  /* Hero */
-  .hero {
-    min-height: 60vh;
-  }
+    /* Process/Accordion */
+    .process-item { padding: 25px; }
+    .header-row { align-items: flex-start; }
+    .number { font-size: 32px; }
+    .title { font-size: 18px; }
+    .icon { width: 40px; height: 40px; font-size: 24px; }
+    .left-content { gap: 15px; }
 
-  .hero-img {
-    max-width: 100%;
-  }
+    /* Team */
+    .team-grid { grid-template-columns: 1fr; }
 
-  /* Services */
-  .service-card {
-    padding: 20px;
-    height: 210px;
-  }
+    /* Testimonials */
+    .testimonial-wrapper { padding: 1rem 20px; }
+    .testimonial-card { flex: 0 0 100%; }
 
-  .service-card h5 {
-    font-size: 18px;
-  }
+    /* Contact Form */
+    .wrapper {
+        flex-direction: column;
+        padding: 24px;
+        margin: 20px auto;
+    }
+    .left, .right { width: 100%; }
+    .right { margin-top: 30px; }
+    .tabs { flex-wrap: wrap; }
 
-  .service-img {
-    width: 80px;
-  }
-
-  /* CTA */
-  .cta-wrapper {
-    padding: 30px;
-    gap: 20px;
-  }
-
-  .cta-content h2 {
-    font-size: 26px;
-  }
-
-  /* Case study */
-  .case-container {
-    padding: 32px 26px;
-  }
-
-  /* Accordion */
-  .process-item {
-    padding: 26px 28px;
-  }
-
-  .number {
-    font-size: 42px;
-  }
-
-  .title {
-    font-size: 22px;
-  }
-
-  /* Team */
-  .team-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Testimonials */
-  .testimonial-card {
-    flex: 0 0 85%;
-  }
-
-  /* Contact form */
-  .wrapper {
-    flex-direction: column;
-    padding: 24px;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-  }
-
-  /* Footer */
-  .footer {
-    padding: 40px 20px;
-  }
-
-  .footer-top {
-    flex-direction: column;
-  }
-
-  .social {
-    justify-content: flex-start;
-  }
+    /* Footer */
+    .footer { padding: 30px 20px; }
+    .footer-top { flex-direction: column; align-items: flex-start; }
+    .newsletter { flex-direction: column; width: 100%; box-sizing: border-box; }
+    .newsletter input { width: 100%; box-sizing: border-box; }
+    .newsletter button { width: 100%; }
+    .social { width: 100%; justify-content: center; margin-top: 20px; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 10px; }
 }
